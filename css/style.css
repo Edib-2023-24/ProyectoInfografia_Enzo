@@ -8,12 +8,78 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Eloquia";
+  src: url("/font/typekiln_-_eloquiadisplay-extrabold-webfont.woff2") format("woff2"), url("/font/typekiln_-_eloquiadisplay-extrabold-webfont.woff") format("woff");
+  src: url("/font/typekiln_-_eloquiatext-extralight-webfont.woff2") format("woff2"), url("/font/typekiln_-_eloquiatext-extralight-webfont.woff") format("woff");
 }
 
 /* ******************************** */
 
 /* Colores */
+:root {
+  /* colors */
+  --color-azul-claro: #4351a2;
+  --color-celestebuen: #0075ad;
+  --color-celestesom: #44a5df;
+  --color-fondo: #f6f5f6;
+  --color-rectanguloo: #bfbebe;
+  --color-rojo-claro: #aa1941;
+  --color-violeta: #7e4699;
+  --color-negro-texto: #1a1a1a;
+
+  /* Border de rectangulo */
+  --tam-borderRadius:20px;
+}
 
 /* ******************************** */
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+main{
+  background: var(--color-fondo);
+  width: 1500px;
+  height: 720px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: (40,1fr);
+  grid-template-rows: (12,1Fr);
+  gap: 12px;
+}
+
+main div{
+  background: var(--color-rectanguloo);
+  border-radius: var(--tam-borderRadius);
+}
+
+/* Posicion de todos los DIV'S */
+/* En el grid-area te permite contar las columnas y los rows en una sola linea,
+   por paramero primero va los rows/colum  */
+
+.container__caja16gb{
+  grid-area: span 2/ span 4;
+}
+
+.container__cajaThunderbolt{
+  grid-area: span 2/ span 8;
+}
+
+.container__cajaAdvancedISP{
+  grid-area: span 3/ span 6;
+}
+
+.container__cajaBattery{
+  grid-area: span 3/ span 8;
+}
+
+.container__cajaIpgoneandIpad{
+  grid-area: span 3/ span 6;
+}
+
+.container__caja28x{
+  grid-area: span 3/ span 8;
+}
