@@ -83,3 +83,11 @@ main div{
 .container__caja28x{
   grid-area: span 3/ span 8;
 }
+
+main div:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 0px rgb(var(--color-rectanguloo));
+  transform: rotateY(180deg);
+  transition: transform 2s cubic-bezier(0.68, -0.55,0.27,1.55);
+  background-color: 2s ease;
+}
