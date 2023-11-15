@@ -27,23 +27,31 @@
   --color-violeta: #7e4699;
   --color-negro-texto: #1a1a1a;
 
+  /* Tamaños */
+  --ancho-total: 2000px;
+  --alto-total: 1118px;
+  /* GRID */
+  --grid-2por4: span 2 / span 4;
+  --grid-2por6: span 2 / span 6;
+  --grid-3por4: span 3 / span 4;
+  --grid-3por6: span 3 / span 6;
+  --grid-3por8: span 3 / span 8;
   /* Border de rectangulo */
   --tam-borderRadius:20px;
 }
 
 /* ******************************** */
-.container{
+#container{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 main{
   background: var(--color-fondo);
-  width: 1500px;
-  height: 720px;
+  width: 1610px;
+  height: 900px;
   padding: 12px;
   display: grid;
   grid-template-columns: (40,1fr);
@@ -54,34 +62,60 @@ main{
 main div{
   background: var(--color-rectanguloo);
   border-radius: var(--tam-borderRadius);
+  font-family: "Eloquia";
+  text-align: center;
+
+  /* Cajas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
+
 
 /* Posicion de todos los DIV'S */
 /* En el grid-area te permite contar las columnas y los rows en una sola linea,
    por paramero primero va los rows/colum  */
 
-.container__caja16gb{
-  grid-area: span 2/ span 4;
+/* Grid 2x4 */
+.container__caja16gb,
+.container__cajaTouchID,
+.container__caja2tb,
+.container__cajaWifi6{
+  grid-area: var(--grid-2por4);
 }
 
-.container__cajaThunderbolt{
-  grid-area: span 2/ span 8;
+/* Grid 2x6 */
+.container__caja13-3,
+.container__cajaP3wide{
+  grid-area: var(--grid-2por6);
 }
 
-.container__cajaAdvancedISP{
-  grid-area: span 3/ span 6;
+/* Grid 3x4 */
+.container__cajaSecure,
+.container__cajaActivecooling{
+  grid-area: var(--grid-3por4);
 }
 
-.container__cajaBattery{
-  grid-area: span 3/ span 8;
+/* Grid 3x6 */
+.container__cajaAdvancedISP,
+.container__cajaStudio{
+  grid-area: var(--grid-3por6);
 }
 
-.container__cajaIpgoneandIpad{
-  grid-area: span 3/ span 6;
+/* Grid 3x8 */
+.container__cajaBattery,
+.container__caja28x,
+.container__caja5x,
+.container__caja11x{
+  grid-area: var(--grid-3por8);
 }
 
-.container__caja28x{
-  grid-area: span 3/ span 8;
+
+main div *{
+  transform: rotateY(180deg);
+  opacity: 10%;
 }
 
 main div:hover{
